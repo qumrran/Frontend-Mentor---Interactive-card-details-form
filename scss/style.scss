@@ -1,0 +1,268 @@
+@import "variables";
+@import "reset";
+
+.block {
+    min-width: 375px;
+    @media screen and (min-width: 1200px) {
+       height: 100vh;
+       display: flex;
+      }
+}
+
+.block__header {
+    background: url(/images/bg-main-mobile.png);
+    height: 240px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @media screen and (min-width: 1200px) {
+        background: url(/images/bg-main-desktop.png);
+        background-size: cover;
+        height: 100%;
+        width: 483px;
+      }
+      
+    &--image {
+        width: 285px;
+        height: 180px;
+        position: relative;
+        left: 25px;
+        @media screen and (min-width: 1200px) {
+           left: 258px;
+           top: 110px;
+          }
+       
+    }
+    &__creditcard {
+        background: url(/images/bg-card-front.png);
+        position: absolute;
+        top: 130px;
+        left: 12px;
+        width: 285px;
+        height: 155px;
+        border-radius: 5px;
+        color: $background-color;
+       
+        
+        @media screen and (min-width: 1200px) {
+            left: 258px;
+            top: 160px;
+            height: 180px;
+           }
+        &--circle1 {
+            position: absolute;
+            margin: 20px 0 0 20px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $background-color;
+        }
+        &--circle2 {
+            position: absolute;
+            margin: 28px 0 0 60px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid $background-color;
+        }
+        &--number {
+            position: absolute;
+            margin: 90px 20px 0 20px;
+            font-size: 16px;
+            letter-spacing: 4px;
+            @media screen and (min-width: 1200px) {
+                margin: 100px 20px 0 20px;
+               }
+        }
+        &--name {
+            position: absolute;
+            margin: 125px 0 0 20px;
+            letter-spacing: 1px;
+            font-size: 14px;
+            @media screen and (min-width: 1200px) {
+                margin: 140px 0 0 20px;
+               }
+        }
+        &--date {
+            position: absolute;
+            margin: 125px 0 0 216px;
+            letter-spacing: 1px; 
+            font-size: 14px;
+            @media screen and (min-width: 1200px) {
+                margin: 140px 0 0 216px;
+               }
+        }
+        
+    }
+}
+
+main {
+    @media screen and (min-width: 1200px) {
+       
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+        justify-content: center;
+       }
+
+}
+
+.block__cardholder {
+    
+    margin: 90px 25px;
+    display: flex;
+    flex-direction: column;
+    &--label {
+        text-transform: uppercase;
+        font-size: 14px;
+        margin: 12px 0;
+       
+    }
+    &--name {
+        height: 45px;
+        border-radius: 8px;
+        border: 2px solid $light-grayish-violet;
+        text-indent: 16px;  
+    }
+    &--name::placeholder {
+        font-size: 16px;
+        color: $dark-grayish-violet;
+        
+    }
+    &--alert {
+        font-size: 12px;
+        color: $red;
+        padding-top: 5px;
+    }
+
+    &--number {
+        height: 45px;
+        border-radius: 8px;
+        border: 2px solid $light-grayish-violet;
+        text-indent: 16px;  
+    }
+
+    &--numberalert {
+        font-size: 12px;
+        color: $red;
+        padding-top: 5px;
+    }
+    &--number::placeholder {
+        font-size: 16px;
+        color: $dark-grayish-violet;  
+    }
+    &--datealert {
+        font-size: 12px;
+        color: $red;
+        padding-top: 5px;
+    }
+
+    &--datealert2 {
+        font-size: 12px;
+        color: $red;
+        padding-top: 5px;
+    }
+
+    &--cvcalert {
+        font-size: 12px;
+        color: $red;
+        padding-top: 5px;
+    }
+
+    &--submit {
+        height: 53px;
+        background-color: $button-color;
+        border: none;
+        border-radius: 8px;
+        margin-top: 10px;
+        color: $background-color;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+   &--submit:hover {
+    background-color: lighten($button-color, 15%);
+    }
+
+   
+
+}
+
+.block__cardholder__date {
+    display: flex;
+    flex-direction: row;
+    height: 45px;
+    margin-bottom: 12px;
+    justify-content: space-between;
+    &--month {
+        width: 72px;
+        border-radius: 8px;
+        border: 2px solid $light-grayish-violet;
+        text-indent: 16px; 
+        margin-right: 10px;
+    }
+    &--month::placeholder {
+        color: $dark-grayish-violet; 
+    }
+    &--year {
+        width: 72px;
+        border-radius: 8px;
+        border: 2px solid $light-grayish-violet;
+        text-indent: 16px; 
+        margin-right: 10px;
+    }
+    &--year::placeholder {
+        color: $dark-grayish-violet; 
+    }
+    &--cvc {
+        
+        flex-grow: 1;
+        border-radius: 8px;
+        border: 2px solid $light-grayish-violet;
+        text-indent: 16px; 
+    }
+    &--cvc::placeholder {
+        color: $dark-grayish-violet; 
+    }
+
+}
+
+.block__thanks {
+    margin: 90px 25px 0 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    &--completeicon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 50px;
+    }
+    &--item1 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    }
+    &--item2 {
+        color: $dark-grayish-violet;
+        margin-bottom: 50px;
+    }
+    &--btn {
+        height: 53px;
+        width: 327px;
+        background-color: $button-color;
+        border-radius: 8px;
+        margin-top: 10px;
+        color: $background-color;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+   &--btn:hover {
+    background-color: lighten($button-color, 15%);
+    }
+   
+   
+}
