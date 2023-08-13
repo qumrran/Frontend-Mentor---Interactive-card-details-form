@@ -20,7 +20,7 @@ body {
 }
 
 .block__header {
-  background: url(/images/bg-main-mobile.png);
+  background: url(./images/bg-main-mobile.png);
   height: 240px;
   background-size: cover;
   display: flex;
@@ -31,7 +31,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .block__header {
-    background: url(/images/bg-main-desktop.png);
+    background: url(./images/bg-main-desktop.png);
     background-size: cover;
     height: 100%;
     width: 483px;
@@ -50,7 +50,7 @@ body {
   }
 }
 .block__header__creditcard {
-  background: url(/images/bg-card-front.png);
+  background: url(./images/bg-card-front.png);
   position: absolute;
   top: 130px;
   left: 12px;
